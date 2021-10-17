@@ -14,5 +14,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home', [
+        "title" => "Capstone Project",
+        'active' => 'home'
+    ]);
+});
+
+Route::get('/profile', function () {
+    return view('profile', [
+        "title" => "Profile",
+        'active' => 'profile'
+    ]);
+});
+
+Route::get('/facilities', function () {
+    return view('facilities', [
+        "title" => "Facilities",
+        'active' => 'facilities'
+    ]);
+});
+
+Route::get('/contact', function () {
+    return view('contact', [
+        "title" => "Contact",
+        'active' => 'contact'
+    ]);
 });
